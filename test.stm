@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>small</title>
+    <script type="text/javascript" src="./lang/test.js"></script>
+    <script type="text/javascript" src="./lib/lang.js"></script>
+    <script type="text/javascript">
+     function load(){	  
+
+	 var controller_lang = '<!-- #echo var="$LANGUAGE" -->'
+
+	 if(controller_lang === 'Unknown Variable Name'){
+	     controller_lang = 'kanji';
+	 }
+	     
+	 l = new LANG(controller_lang.trim(),json);	  
+	 l.set_lang(document)
+     }
+    </script>
+  </head>
+  <body onload="load();">
+    <h1>Hello, World!</h1>
+    
+    <div id='test1'> </div>
+    <div id='test2'> </div>
+  </body>
+</html>
+
